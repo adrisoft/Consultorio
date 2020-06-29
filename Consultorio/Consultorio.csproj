@@ -1,0 +1,734 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C4029A47-CE40-49B1-A71E-AAADA26EE421}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Consultorio</RootNamespace>
+    <AssemblyName>Consultorio Médico</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>9</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Consultorio Médico.xml</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icono.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>bin\Debug\Consultorio Médico.xml</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Consultorio Médico.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Consultorio Médico.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Microsoft.VisualBasic.PowerPacks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=5.0.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Recursos\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Webcam">
+      <HintPath>..\..\..\Recursos\Webcam.exe</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common.cs" />
+    <Compile Include="Conexion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Conexion.Designer.cs">
+      <DependentUpon>Conexion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config.cs" />
+    <Compile Include="Datos\ABM.cs" />
+    <Compile Include="Datos\Common.cs" />
+    <Compile Include="Datos\DatosReportes.cs" />
+    <Compile Include="Datos\Entidades.cs" />
+    <Compile Include="MDI\FrmAccionesFarmacologicas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmAccionesFarmacologicas.Designer.cs">
+      <DependentUpon>FrmAccionesFarmacologicas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmAccionesFarmacologicasABM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmAccionesFarmacologicasABM.Designer.cs">
+      <DependentUpon>FrmAccionesFarmacologicasABM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmAutorizaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmAutorizaciones.Designer.cs">
+      <DependentUpon>FrmAutorizaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmAutorizacionesABM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmAutorizacionesABM.Designer.cs">
+      <DependentUpon>FrmAutorizacionesABM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmBackup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmBackup.Designer.cs">
+      <DependentUpon>FrmBackup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmCarteraCheques.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmCarteraCheques.Designer.cs">
+      <DependentUpon>FrmCarteraCheques.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmAcercaDe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmAcercaDe.Designer.cs">
+      <DependentUpon>FrmAcercaDe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmCaja.Designer.cs">
+      <DependentUpon>FrmCaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmCajaABM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmCajaABM.Designer.cs">
+      <DependentUpon>FrmCajaABM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmCarteraChequesABM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmCarteraChequesABM.Designer.cs">
+      <DependentUpon>FrmCarteraChequesABM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmConsultas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmConsultas.Designer.cs">
+      <DependentUpon>FrmConsultas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmConsultasABM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmConsultasABM.Designer.cs">
+      <DependentUpon>FrmConsultasABM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmContarCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmContarCaja.Designer.cs">
+      <DependentUpon>FrmContarCaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmCuotas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmCuotas.Designer.cs">
+      <DependentUpon>FrmCuotas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmCuotasPorMes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmCuotasPorMes.Designer.cs">
+      <DependentUpon>FrmCuotasPorMes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmDialogoFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmDialogoFactura.Designer.cs">
+      <DependentUpon>FrmDialogoFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmEmpresaABM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmEmpresaABM.Designer.cs">
+      <DependentUpon>FrmEmpresaABM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmEnfermedades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmEnfermedades.Designer.cs">
+      <DependentUpon>FrmEnfermedades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmEnfermedadesABM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmEnfermedadesABM.Designer.cs">
+      <DependentUpon>FrmEnfermedadesABM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmEnfermedadesCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmEnfermedadesCategorias.Designer.cs">
+      <DependentUpon>FrmEnfermedadesCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmEnfermedadesCategoriasABM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmEnfermedadesCategoriasABM.Designer.cs">
+      <DependentUpon>FrmEnfermedadesCategoriasABM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmEstudios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmEstudios.Designer.cs">
+      <DependentUpon>FrmEstudios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmEstudiosABM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmEstudiosABM.Designer.cs">
+      <DependentUpon>FrmEstudiosABM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmFactura.Designer.cs">
+      <DependentUpon>FrmFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmFacturaABM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmFacturaABM.Designer.cs">
+      <DependentUpon>FrmFacturaABM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmGenerarHistoriaClinica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmGenerarHistoriaClinica.Designer.cs">
+      <DependentUpon>FrmGenerarHistoriaClinica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmLaboratorios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmLaboratorios.Designer.cs">
+      <DependentUpon>FrmLaboratorios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmLaboratoriosABM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmLaboratoriosABM.Designer.cs">
+      <DependentUpon>FrmLaboratoriosABM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmLibroIVA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmLibroIVA.Designer.cs">
+      <DependentUpon>FrmLibroIVA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmLocalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmLocalidad.Designer.cs">
+      <DependentUpon>FrmLocalidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmLocalidadABM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmLocalidadABM.Designer.cs">
+      <DependentUpon>FrmLocalidadABM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmMedicamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmMedicamentos.Designer.cs">
+      <DependentUpon>FrmMedicamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmMedicamentosABM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmMedicamentosABM.Designer.cs">
+      <DependentUpon>FrmMedicamentosABM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmObrasSociales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmObrasSociales.Designer.cs">
+      <DependentUpon>FrmObrasSociales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmObrasSocialesABM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmObrasSocialesABM.Designer.cs">
+      <DependentUpon>FrmObrasSocialesABM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmOrdenPagoABM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmOrdenPagoABM.Designer.cs">
+      <DependentUpon>FrmOrdenPagoABM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmPais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmPais.Designer.cs">
+      <DependentUpon>FrmPais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmPaisABM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmPaisABM.Designer.cs">
+      <DependentUpon>FrmPaisABM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmProvincia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmProvincia.Designer.cs">
+      <DependentUpon>FrmProvincia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmProvinciaABM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmProvinciaABM.Designer.cs">
+      <DependentUpon>FrmProvinciaABM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmResumenCuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmResumenCuenta.Designer.cs">
+      <DependentUpon>FrmResumenCuenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmSaldos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmSaldos.Designer.cs">
+      <DependentUpon>FrmSaldos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmSeries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmSeries.Designer.cs">
+      <DependentUpon>FrmSeries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmTercero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmTercero.Designer.cs">
+      <DependentUpon>FrmTercero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmTerceroABM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmTerceroABM.Designer.cs">
+      <DependentUpon>FrmTerceroABM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmTratamientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmTratamientos.Designer.cs">
+      <DependentUpon>FrmTratamientos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmTratamientosABM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmTratamientosABM.Designer.cs">
+      <DependentUpon>FrmTratamientosABM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmTurnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmTurnos.Designer.cs">
+      <DependentUpon>FrmTurnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmTurnosABM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmTurnosABM.Designer.cs">
+      <DependentUpon>FrmTurnosABM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmVistaPrevia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmVistaPrevia.Designer.cs">
+      <DependentUpon>FrmVistaPrevia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmVisualizarImagen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmVisualizarImagen.Designer.cs">
+      <DependentUpon>FrmVisualizarImagen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FrmVolVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FrmVolVentas.Designer.cs">
+      <DependentUpon>FrmVolVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash.Designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Conexion.resx">
+      <DependentUpon>Conexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmAccionesFarmacologicas.resx">
+      <DependentUpon>FrmAccionesFarmacologicas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmAccionesFarmacologicasABM.resx">
+      <DependentUpon>FrmAccionesFarmacologicasABM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmAcercaDe.resx">
+      <DependentUpon>FrmAcercaDe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmAutorizaciones.resx">
+      <DependentUpon>FrmAutorizaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmAutorizacionesABM.resx">
+      <DependentUpon>FrmAutorizacionesABM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmBackup.resx">
+      <DependentUpon>FrmBackup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmCaja.resx">
+      <DependentUpon>FrmCaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmCajaABM.resx">
+      <DependentUpon>FrmCajaABM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmCarteraCheques.resx">
+      <DependentUpon>FrmCarteraCheques.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmCarteraChequesABM.resx">
+      <DependentUpon>FrmCarteraChequesABM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmConsultas.resx">
+      <DependentUpon>FrmConsultas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmConsultasABM.resx">
+      <DependentUpon>FrmConsultasABM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmContarCaja.resx">
+      <DependentUpon>FrmContarCaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmCuotas.resx">
+      <DependentUpon>FrmCuotas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmCuotasPorMes.resx">
+      <DependentUpon>FrmCuotasPorMes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmDialogoFactura.resx">
+      <DependentUpon>FrmDialogoFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmEmpresaABM.resx">
+      <DependentUpon>FrmEmpresaABM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmEnfermedades.resx">
+      <DependentUpon>FrmEnfermedades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmEnfermedadesABM.resx">
+      <DependentUpon>FrmEnfermedadesABM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmEnfermedadesCategorias.resx">
+      <DependentUpon>FrmEnfermedadesCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmEnfermedadesCategoriasABM.resx">
+      <DependentUpon>FrmEnfermedadesCategoriasABM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmEstudios.resx">
+      <DependentUpon>FrmEstudios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmEstudiosABM.resx">
+      <DependentUpon>FrmEstudiosABM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmFactura.resx">
+      <DependentUpon>FrmFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmFacturaABM.resx">
+      <DependentUpon>FrmFacturaABM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmGenerarHistoriaClinica.resx">
+      <DependentUpon>FrmGenerarHistoriaClinica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmLaboratorios.resx">
+      <DependentUpon>FrmLaboratorios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmLaboratoriosABM.resx">
+      <DependentUpon>FrmLaboratoriosABM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmLibroIVA.resx">
+      <DependentUpon>FrmLibroIVA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmLocalidad.resx">
+      <DependentUpon>FrmLocalidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmLocalidadABM.resx">
+      <DependentUpon>FrmLocalidadABM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmMedicamentos.resx">
+      <DependentUpon>FrmMedicamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmMedicamentosABM.resx">
+      <DependentUpon>FrmMedicamentosABM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmObrasSociales.resx">
+      <DependentUpon>FrmObrasSociales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmObrasSocialesABM.resx">
+      <DependentUpon>FrmObrasSocialesABM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmOrdenPagoABM.resx">
+      <DependentUpon>FrmOrdenPagoABM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmPais.resx">
+      <DependentUpon>FrmPais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmPaisABM.resx">
+      <DependentUpon>FrmPaisABM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmProvincia.resx">
+      <DependentUpon>FrmProvincia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmProvinciaABM.resx">
+      <DependentUpon>FrmProvinciaABM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmResumenCuenta.resx">
+      <DependentUpon>FrmResumenCuenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmSaldos.resx">
+      <DependentUpon>FrmSaldos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmSeries.resx">
+      <DependentUpon>FrmSeries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmTercero.resx">
+      <DependentUpon>FrmTercero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmTerceroABM.resx">
+      <DependentUpon>FrmTerceroABM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmTratamientos.resx">
+      <DependentUpon>FrmTratamientos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmTratamientosABM.resx">
+      <DependentUpon>FrmTratamientosABM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmTurnos.resx">
+      <DependentUpon>FrmTurnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmTurnosABM.resx">
+      <DependentUpon>FrmTurnosABM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmVistaPrevia.resx">
+      <DependentUpon>FrmVistaPrevia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmVisualizarImagen.resx">
+      <DependentUpon>FrmVisualizarImagen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FrmVolVentas.resx">
+      <DependentUpon>FrmVolVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reportes\RepBanlance.rdlc" />
+    <EmbeddedResource Include="Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\DataSources\Sistema_de_Coutas.Datos.DatosReportes.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icono.ico" />
+    <None Include="Resources\forum.png" />
+    <None Include="Resources\webcam1.png" />
+    <None Include="Resources\webcam.png" />
+    <None Include="Resources\copiarConsulta.png" />
+    <None Include="Resources\lista9.png" />
+    <None Include="Resources\lista8.png" />
+    <None Include="Resources\lista7.png" />
+    <None Include="Resources\lista6.png" />
+    <None Include="Resources\lista5.png" />
+    <None Include="Resources\lista4.png" />
+    <None Include="Resources\lista3.png" />
+    <None Include="Resources\lista2.png" />
+    <None Include="Resources\lista1.png" />
+    <None Include="Resources\medicamentos.png" />
+    <None Include="Resources\laboratorio_64.png" />
+    <None Include="Resources\laboratorio_32.png" />
+    <None Include="Resources\inyeccion.png" />
+    <None Include="Resources\fondo_consultorio.jpg" />
+    <None Include="Resources\HistorialArticulo.png" />
+    <None Include="Resources\YAMAHAR1.jpg" />
+    <None Include="Resources\calculator-icon.png" />
+    <None Include="Resources\1318511806_Information.png" />
+    <None Include="Resources\ArchivoPDF.png" />
+    <None Include="Resources\OrganizarIconos.png" />
+    <None Include="Resources\MosaicoVertical.png" />
+    <None Include="Resources\MosaicoHorizontal.png" />
+    <None Include="Resources\Cascada.png" />
+    <None Include="Resources\1318514919_receipt.png" />
+    <None Include="Resources\1318518600_04_provincia.png" />
+    <None Include="Resources\1318518644_pais.png" />
+    <None Include="Resources\1318518596_localidad.png" />
+    <None Include="Resources\1318512329_lists.png" />
+    <None Include="Resources\1318517436_factura.png" />
+    <None Include="Resources\1318516983_document_32.png" />
+    <None Include="Resources\1318516999_document-print.png" />
+    <None Include="Resources\mini_search.png" />
+    <None Include="Resources\1318515946_kfm.png" />
+    <None Include="Resources\1318515697_Todo.png" />
+    <None Include="Resources\1318512304_taskbar.png" />
+    <None Include="Resources\1318514988_folder_with_file.png" />
+    <None Include="Resources\1318514255_Business.png" />
+    <None Include="Resources\1318514189_Business.png" />
+    <None Include="Resources\1318513490_Log Out.png" />
+    <None Include="Resources\1318513465_Edit.png" />
+    <None Include="Resources\1318513481_Delete.png" />
+    <None Include="Resources\1318513498_Add.png" />
+    <None Include="Resources\1318513485_Check.png" />
+    <None Include="Resources\1318513493_Stock Index Down.png" />
+    <None Include="Resources\1318513503_Stock Index Up.png" />
+    <None Include="Resources\1318513582_Search.png" />
+    <None Include="Resources\1318512153_Box_content.png" />
+    <None Include="Resources\1318511950_users.png" />
+    <None Include="Resources\1318511955_client.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Consultorio.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="FechaCuotaDesde" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)">11/07/2011 16:44:00</Value>
+    </Setting>
+    <Setting Name="FechaCuotaHasta" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)">11/07/2011 16:44:00</Value>
+    </Setting>
+    <Setting Name="UltimaRutaGuardarBackup" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\BACKUP\</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
